@@ -1,5 +1,6 @@
-const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
 
+        // Function to sort articles (ignoring "a", "an", "the")
         function sortArticles(articles) {
             return articles.sort((a, b) => {
                 const ignoreWords = /^(a|an|the)\s/i;
@@ -9,9 +10,11 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
             });
         }
 
+        // Get the sorted articles
         const sortedBands = sortArticles(bands);
 
-        const ul = document.querySelector('#band');
+        // Create list items for each article
+        const ul = document.getElementById('band');
         sortedBands.forEach(article => {
             const li = document.createElement('li');
             li.textContent = article;
