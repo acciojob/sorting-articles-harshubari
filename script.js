@@ -11,7 +11,7 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
 
         const sortedBands = sortArticles(bands);
 
-        const ul = document.getElementById('#band');
+        const ul = document.querySelector('#band');
         sortedBands.forEach(article => {
             const li = document.createElement('li');
             li.textContent = article;
