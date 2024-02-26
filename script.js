@@ -1,5 +1,5 @@
-//your JS code here. If required.
-const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skyliconst bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+
         function sortArticles(articles) {
             return articles.sort((a, b) => {
                 const ignoreWords = /^(a|an|the)\s/i;
@@ -8,7 +8,9 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
                 return cleanA.localeCompare(cleanB);
             });
         }
+
         const sortedBands = sortArticles(bands);
+
         const ul = document.getElementById('band');
         sortedBands.forEach(article => {
             const li = document.createElement('li');
